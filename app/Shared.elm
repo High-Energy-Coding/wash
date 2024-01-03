@@ -3,13 +3,14 @@ module Shared exposing (Data, Model, Msg(..), SharedMsg(..), template)
 import BackendTask exposing (BackendTask)
 import Effect exposing (Effect)
 import FatalError exposing (FatalError)
-import Html exposing (Html)
-import Html.Events
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Pages.Flags
 import Pages.PageUrl exposing (PageUrl)
-import UrlPath exposing (UrlPath)
 import Route exposing (Route)
 import SharedTemplate exposing (SharedTemplate)
+import UrlPath exposing (UrlPath)
 import View exposing (View)
 
 
@@ -93,28 +94,70 @@ view :
     -> { body : List (Html msg), title : String }
 view sharedData page model toMsg pageView =
     { body =
-        [ Html.nav []
-            [ Html.button
-                [ Html.Events.onClick MenuClicked ]
-                [ Html.text
-                    (if model.showMenu then
-                        "Close Menu"
-
-                     else
-                        "Open Menu"
-                    )
-                ]
-            , if model.showMenu then
-                Html.ul []
-                    [ Html.li [] [ Html.text "Menu item 1" ]
-                    , Html.li [] [ Html.text "Menu item 2" ]
-                    ]
-
-              else
-                Html.text ""
-            ]
-            |> Html.map toMsg
+        [ Html.nav [] [ navView model ] |> Html.map toMsg
         , Html.main_ [] pageView.body
+        , div [ class "footer-row " ] [ footerView ]
         ]
     , title = pageView.title
     }
+
+
+navView model =
+    div [ class "nav-container" ]
+        ([ div [ class "topbar" ]
+            [ a [] [ img [ class "logo", src "/full-logo.png" ] [] ]
+            , div [ class "clickies" ]
+                [ a [] [ div [ class "clickie" ] [ text "Main" ] ]
+                , a [] [ div [ class "clickie" ] [ text "About Us" ] ]
+                , a [] [ div [ class "clickie" ] [ text "Contact Us" ] ]
+                ]
+            , hamburgerOrX model
+            ]
+         ]
+            ++ navItemsView model
+        )
+
+
+hamburgerOrX model =
+    case model.showMenu of
+        False ->
+            button [ onClick MenuClicked, class "icon" ] [ i [ class "fa fa-bars" ] [] ]
+
+        True ->
+            button [ onClick MenuClicked, class "icon" ] [ i [ class "fa fa-close" ] [] ]
+
+
+navItemsView model =
+    case model.showMenu of
+        False ->
+            []
+
+        True ->
+            [ Route.Index |> Route.link [] [ div [ class "item" ] [ text "Main" ] ]
+            , a [] [ div [ class "item" ] [ text "About Us" ] ]
+            , a [] [ div [ class "item" ] [ text "Contact Us" ] ]
+            ]
+
+
+footerView =
+    footer
+        [ class "footer" ]
+        [ div
+            [ class "contact-us" ]
+            [ h4 [] [ text "Contact Us" ]
+            , p [] [ text "123 John Street" ]
+            , p [] [ text "DeKalb, IL 60015" ]
+            , p [] [ text "(847) 405-3021" ]
+            , p [] [ text "hello@albropowerwashing.com" ]
+            ]
+        , div
+            [ class "social-media" ]
+            [ h4 [] [ text "Social Media" ]
+            , div [ class "icons" ]
+                [ a [ class "fa fa-instagram" ] []
+                , i [ class "fa fa-twitter" ] []
+                , i [ class "fa fa-linkedin" ] []
+                , i [ class "fa fa-facebook" ] []
+                ]
+            ]
+        ]

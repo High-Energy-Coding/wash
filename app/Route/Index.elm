@@ -4,7 +4,9 @@ import BackendTask exposing (BackendTask)
 import FatalError exposing (FatalError)
 import Head
 import Head.Seo as Seo
-import Html
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Pages.Url
 import PagesMsg exposing (PagesMsg)
 import Route
@@ -77,12 +79,29 @@ view :
     -> View (PagesMsg Msg)
 view app shared =
     { title = "Albro Power Washing"
-    , body =
-        [ Html.h1 [] [ Html.text "Albro Power Washing" ]
-        , Html.p []
-            [ Html.text <| "The message is: " ++ app.data.message
-            ]
-        , Route.Blog__Slug_ { slug = "hello" }
-            |> Route.link [] [ Html.text "My blog post" ]
-        ]
+    , body = homeView
     }
+
+
+homeView =
+    [ div [ class "content" ]
+        [ div [ class "hero-container" ] hero2
+        , div [ class "row " ] [ whatWeDoView ]
+        ]
+    ]
+
+
+whatWeDoView =
+    div [ class "wwd-container" ]
+        [ div [ class "draw" ] [ img [ src "logo.png", class "draw-logo" ] [] ]
+        , div [ class "why" ]
+            [ h1 [] [ text "Power Wash Your Heart Out Today!" ]
+            , p [] [ text "because kenny said so " ]
+            ]
+        ]
+
+
+hero2 =
+    [ img [ class "hero", src "/house.jpg" ] []
+    , h1 [ class "headline" ] [ text "Power Wash", br [] [], text "with", br [] [], text "confidence" ]
+    ]
