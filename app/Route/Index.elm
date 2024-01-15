@@ -106,10 +106,12 @@ service title body =
         [ div [ class "service-headline" ]
             [ h2 [] [ text title ]
             ]
-        , div
-            [ class " service-body"
-            ]
-            [ p [] [ text body ]
+        , div [ class "service-body-container" ]
+            [ div
+                [ class "service-body"
+                , style "background-image" """url("wash.jpg")"""
+                ]
+                []
             ]
         ]
 

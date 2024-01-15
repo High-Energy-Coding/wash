@@ -6,6 +6,14 @@ body {
   color: #293c4b;
   background-color: white;
   box-sizing: border-box;
+  --service-1-color: rgb(66, 71, 105);
+  --service-1-color-trans: rgb(66, 71, 105, 0.5);
+  --service-2-color: rgb(112, 119, 161);
+  --service-2-color-trans: rgb(112, 119, 161, 0.5);
+  --service-3-color: rgb(45, 50, 80);
+  --service-3-color-trans: rgb(45, 50, 80, 0.5);
+  --service-4-color: rgb(246, 177, 122);
+  --service-4-color-trans: rgb(246, 177, 122, 0.5);
 }
 
 h1 {
@@ -491,40 +499,57 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   @media (min-width: 600px;) {
-    
   }
 }
 .service {
-    height: 500px;
+  height: 500px;
   width: 100%;
   @media (min-width: 600px) {
-      width: 50%;
+    width: 50%;
   }
   @media (min-width: 1200px) {
-      width: 25%;
+    width: 25%;
   }
 }
 .service-headline {
-    height: 72px;
+  height: 72px;
   border: solid black 2px;
+  color: white;
 }
-.service-body {
-    height: calc(100% - 72px);
+.service-body-container {
+  height: calc(100% - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.service-body {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.service-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--service-1-color-trans);
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
 
 .service-1 {
-  background-color: lightBlue;
+  background-color: var(--service-1-color);
 }
 .service-2 {
-  background-color: orange;
+  background-color: var(--service-2-color);
 }
-
 .service-3 {
-  background-color: red;
+  background-color: var(--service-3-color);
 }
 .service-4 {
-  background-color: gray;
+  background-color: var(--service-4-color);
 }
