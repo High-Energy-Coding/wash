@@ -475,7 +475,7 @@ a {
   font-size: 16px;
 }
 .contact-container {
-  min-height: calc(100vh - (112px + 265px));
+  margin: 128px 8px;
 }
 .typings input {
   padding: 0 8px;

@@ -88,8 +88,32 @@ homeView =
         [ div [ class "hero-container" ] hero2
         , div [ class "row " ] [ whatWeDoView ]
         , div [] [ servicesView ]
+        , div [] [ contactUsView ]
         ]
     ]
+
+
+contactUsView =
+    div [ class "contact-container" ]
+        [ --  div [ class "whiteboard" ] [ img [ src "/whiteboard.jpg" ] [] ]
+          h1 [ class "interested" ] [ text "Interested in connecting with us?" ]
+        , div [ class "connect" ]
+            [ Html.form
+                [ name "connect"
+                , class "netlify"
+                , Html.Attributes.attribute "data-netlify" "true"
+                , Html.Attributes.attribute "action" "/"
+                , method "POST"
+                ]
+                [ input [ type_ "hidden", name "form-name", value "connect" ] []
+                , div [ class "typings" ] [ input [ type_ "text", name "name", placeholder "Name" ] [] ]
+                , div [ class "typings" ] [ input [ type_ "email", name "email", placeholder "E-mail" ] [] ]
+                , div [ class "typings" ] [ input [ type_ "tel", name "phone", placeholder "Phone" ] [] ]
+                , div [ class "typings" ] [ input [ type_ "text", name "message", placeholder "Message", class "message" ] [] ]
+                , button [ type_ "submit" ] [ text "Send" ]
+                ]
+            ]
+        ]
 
 
 servicesView =
