@@ -87,8 +87,31 @@ homeView =
     [ div [ class "content" ]
         [ div [ class "hero-container" ] hero2
         , div [ class "row " ] [ whatWeDoView ]
+        , div [] [ servicesView ]
         ]
     ]
+
+
+servicesView =
+    div [ class "services-container" ]
+        [ service "Service 1" "Service 1 that we provide is a really good service."
+        , div [ class "service service-2" ] [ h2 [] [ text "Service 2" ] ]
+        , div [ class "service service-3" ] [ h2 [] [ text "Service 3" ] ]
+        , div [ class "service service-4" ] [ h2 [] [ text "Service 4" ] ]
+        ]
+
+
+service title body =
+    div [ class "service service-1" ]
+        [ div [ class "service-headline" ]
+            [ h2 [] [ text title ]
+            ]
+        , div
+            [ class " service-body"
+            ]
+            [ p [] [ text body ]
+            ]
+        ]
 
 
 hero2 =
@@ -107,8 +130,6 @@ whatWeDoView =
     div [ class "wwd-container" ]
         [ div [ class "draw" ] [ img [ src "full-logo.png", class "draw-logo" ] [] ]
         , div [ class "why" ]
-            [ h1 [] [ text "Who are we?" ]
-            , p [] [ text "Welcome to Albro Power Wash, your premier destination for unrivaled power washing services. We are the professionals dedicated to eliminating dirt and grime with unmatched precision and power. At Albro Power Washing, we deliver tough, reliable, and passionate cleaning solutions. With state-of-the-art technology and a commitment to excellence, we redefine cleanliness in every service. Choose us for a powerful, professional, and spotless clean that stands as a testament to our unwavering dedication." ]
-            , p [] [ text " Discover the difference – Albro Power Washing, where power meets cleanliness." ]
+            [ p [] [ text "Welcome to Albro Power Wash, your top choice for powerful cleaning services. We specialize in eliminating dirt and grime with precision and state-of-the-art technology. Our dedicated professionals deliver reliable and passionate cleaning solutions. Choose us for a spotless clean that reflects our unwavering commitment to excellence. Experience the difference at Albro Power Washing, where power meets cleanliness." ]
             ]
         ]
