@@ -94,22 +94,26 @@ homeView =
 
 servicesView =
     div [ class "services-container" ]
-        [ service "Service 1" "Service 1 that we provide is a really good service."
-        , div [ class "service service-2" ] [ h2 [] [ text "Service 2" ] ]
-        , div [ class "service service-3" ] [ h2 [] [ text "Service 3" ] ]
-        , div [ class "service service-4" ] [ h2 [] [ text "Service 4" ] ]
+        [ service "1" "Service 1" "wash.jpg"
+        , service "2" "Service 2" "deck.jpg"
+        , service "3" "Service 3" "house.jpeg"
+        , service "4" "Service 4" "driveway.png"
         ]
 
 
-service title body =
-    div [ class "service service-1" ]
+service count title imgUrl =
+    let
+        styleImgUrl =
+            "url(\"" ++ imgUrl ++ "\")"
+    in
+    div [ class <| "service service-" ++ count ]
         [ div [ class "service-headline" ]
             [ h2 [] [ text title ]
             ]
         , div [ class "service-body-container" ]
             [ div
-                [ class "service-body"
-                , style "background-image" """url("wash.jpg")"""
+                [ class <| "service-body service-body-" ++ count
+                , style "background-image" styleImgUrl
                 ]
                 []
             ]

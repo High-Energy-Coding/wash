@@ -537,8 +537,22 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--service-1-color-trans);
   z-index: 1; /* Ensure the overlay is above the background image */
+}
+.service-body-1::before {
+  background: var(--service-1-color-trans);
+}
+
+.service-body-2::before {
+  background: var(--service-2-color-trans);
+}
+
+.service-body-3::before {
+  background: var(--service-3-color-trans);
+}
+
+.service-body-4::before {
+  background: var(--service-4-color-trans);
 }
 
 .service-1 {
