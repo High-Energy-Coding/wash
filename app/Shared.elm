@@ -148,7 +148,7 @@ footerView =
             , p [] [ text "123 John Street" ]
             , p [] [ text "DeKalb, IL 60015" ]
             , p [] [ text "(847) 405-3021" ]
-            , p [] [ text "hello@albropowerwashing.com" ]
+            , p [] [ text "hello@kanddpressurewashing.com" ]
             ]
         , div
             [ class "social-media" ]

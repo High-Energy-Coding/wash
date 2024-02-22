@@ -1,1 +1,5 @@
 # README
+
+need color palette
+
+

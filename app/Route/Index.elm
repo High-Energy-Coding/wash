@@ -59,16 +59,16 @@ head :
 head app =
     Seo.summary
         { canonicalUrlOverride = Nothing
-        , siteName = "Albro Power Washing"
+        , siteName = "K&D pressure washing LLC"
         , image =
             { url = [ "full-logo.png" ] |> UrlPath.join |> Pages.Url.fromPath
-            , alt = "Albro Power Washing Logo"
+            , alt = "K&D pressure washing LLC Logo"
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "Albro Power Washing"
+        , description = "K&D pressure washing LLC"
         , locale = Nothing
-        , title = "Albro Power Washing"
+        , title = "K&D pressure washing LLC"
         }
         |> Seo.website
 
@@ -78,7 +78,7 @@ view :
     -> Shared.Model
     -> View (PagesMsg Msg)
 view app shared =
-    { title = "Albro Power Washing"
+    { title = "K&D pressure washing LLC"
     , body = homeView
     }
 
@@ -87,10 +87,29 @@ homeView =
     [ div [ class "content" ]
         [ div [ class "hero-container" ] hero2
         , div [ class "row " ] [ whatWeDoView ]
-        , div [] [ servicesView ]
+        , div [] [ greenRowView ]
         , div [] [ contactUsView ]
+        , div [] [ servicesView ]
         ]
     ]
+
+
+greenRowView =
+    div [ class "green-row" ]
+        [ div [ class "green-container" ]
+            [ greenSlotView "Hot Water System" hotWaterBody
+            , greenSlotView "EPA Friendly" epaFriendlyBody
+            , greenSlotView "Waste Water Recovery" wasteWaterBody
+            ]
+        ]
+
+
+greenSlotView title body =
+    div [ class "green-slot" ]
+        [ div [ class "green-image" ] [ img [ class "green-img", src "/system.jpeg" ] [] ]
+        , div [ class "green-title" ] [ h3 [] [ text title ] ]
+        , div [ class "green-body" ] [ p [] [ text body ] ]
+        ]
 
 
 contactUsView =
@@ -160,6 +179,22 @@ whatWeDoView =
     div [ class "wwd-container" ]
         [ div [ class "draw" ] [ img [ src "full-logo.png", class "draw-logo" ] [] ]
         , div [ class "why" ]
-            [ p [] [ text "Welcome to Albro Power Wash, your top choice for powerful cleaning services. We specialize in eliminating dirt and grime with precision and state-of-the-art technology. Our dedicated professionals deliver reliable and passionate cleaning solutions. Choose us for a spotless clean that reflects our unwavering commitment to excellence. Experience the difference at Albro Power Washing, where power meets cleanliness." ]
+            [ p [] [ text "Welcome to K&D pressure washing LLC, your top choice for powerful cleaning services. We specialize in eliminating dirt and grime with precision and state-of-the-art technology. Our dedicated professionals deliver reliable and passionate cleaning solutions. Choose us for a spotless clean that reflects our unwavering commitment to excellence. Experience the difference at K&D pressure washing LLC, where power meets cleanliness." ]
             ]
         ]
+
+
+hotWaterBody =
+    "Our advanced hot water pressure washing system harnesses the power of heated water to efficiently sanitize surfaces without the need for harsh chemicals. This not only ensures thorough cleaning but also minimizes environmental impact by reducing chemical runoff."
+
+
+epaFriendlyBody =
+    "We prioritize EPA-friendly practices by using biodegradable cleaning solutions and adhering to strict environmental regulations. Our commitment to eco-consciousness means cleaner results for your property while safeguarding the planet for future generations."
+
+
+wasteWaterBody =
+    "With our innovative wastewater recovery system, we capture and responsibly manage runoff from pressure washing activities. By preventing contaminated water from entering storm drains, we help protect local ecosystems and comply with environmental standards, ensuring sustainable cleaning practices."
+
+
+loremIpsum =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
