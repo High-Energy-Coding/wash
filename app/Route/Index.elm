@@ -97,16 +97,21 @@ homeView =
 greenRowView =
     div [ class "green-row" ]
         [ div [ class "green-container" ]
-            [ greenSlotView "Hot Water System" hotWaterBody
-            , greenSlotView "EPA Friendly" epaFriendlyBody
-            , greenSlotView "Waste Water Recovery" wasteWaterBody
+            [ div [ class "green-main-title" ]
+                [ h2 [] [ text "Environmentally Minded" ]
+                ]
+            , div [ class "green-main-content" ]
+                [ greenSlotView "/system.jpeg" "Hot Water System" hotWaterBody
+                , greenSlotView "/system2.jpeg" "EPA Friendly" epaFriendlyBody
+                , greenSlotView "/system3.jpeg" "Waste Water Recovery" wasteWaterBody
+                ]
             ]
         ]
 
 
-greenSlotView title body =
+greenSlotView imgUrl title body =
     div [ class "green-slot" ]
-        [ div [ class "green-image" ] [ img [ class "green-img", src "/system.jpeg" ] [] ]
+        [ div [ class "green-image" ] [ img [ class "green-img", src imgUrl ] [] ]
         , div [ class "green-title" ] [ h3 [] [ text title ] ]
         , div [ class "green-body" ] [ p [] [ text body ] ]
         ]
@@ -179,7 +184,7 @@ whatWeDoView =
     div [ class "wwd-container" ]
         [ div [ class "draw" ] [ img [ src "full-logo.png", class "draw-logo" ] [] ]
         , div [ class "why" ]
-            [ p [] [ text "Welcome to K&D pressure washing LLC, your top choice for powerful cleaning services. We specialize in eliminating dirt and grime with precision and state-of-the-art technology. Our dedicated professionals deliver reliable and passionate cleaning solutions. Choose us for a spotless clean that reflects our unwavering commitment to excellence. Experience the difference at K&D pressure washing LLC, where power meets cleanliness." ]
+            [ p [] [ text "Welcome to K&D Pressure Washing LLC, where powerful, eco-conscious cleaning meets excellence. Experience spotless results with our state-of-the-art technology and dedicated professionals." ]
             ]
         ]
 
