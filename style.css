@@ -239,7 +239,9 @@ h1 {
   width: 50%;
 }
 .contact-us {
-  width: 50%;
+  @media only screen and (min-width: 500px) {
+    width: 50%;
+  }
 }
 .icons i {
   margin-left: 8px;
@@ -496,9 +498,37 @@ a {
     width: 25%;
   }
 }
+.service-headline-1 {
+  border: solid black 2px;
+  border-right: solid black 1px;
+}
+.service-headline-2 {
+  border: solid black 2px;
+  border-left: solid black 1px;
+  @media (min-width: 1200px) {
+    border-right: solid black 1px;
+  }
+}
+.service-headline-3 {
+  border: solid black 2px;
+  border-right: solid black 1px;
+  margin-top: 4px;
+  @media (min-width: 1200px) {
+    margin-top: 0;
+    border-left: solid black 1px;
+  }
+}
+.service-headline-4 {
+  border: solid black 2px;
+  margin-top: 4px;
+  @media (min-width: 1200px) {
+    margin-top: 0;
+    border-left: solid black 1px;
+  }
+}
+
 .service-headline {
   height: 72px;
-  border: solid black 2px;
   color: white;
 }
 .service-body-container {

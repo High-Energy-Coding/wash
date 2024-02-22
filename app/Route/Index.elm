@@ -155,7 +155,7 @@ service count title imgUrl =
             "url(\"" ++ imgUrl ++ "\")"
     in
     div [ class <| "service service-" ++ count ]
-        [ div [ class "service-headline" ]
+        [ div [ class <| "service-headline service-headline-" ++ count ]
             [ h2 [] [ text title ]
             ]
         , div [ class "service-body-container" ]
