@@ -98,7 +98,7 @@ greenRowView =
     div [ class "green-row" ]
         [ div [ class "green-container" ]
             [ div [ class "green-main-title" ]
-                [ h2 [] [ text "Environmentally Minded" ]
+                [ h2 [] [ text "Environmentally Conscious" ]
                 ]
             , div [ class "green-main-content" ]
                 [ greenSlotView "/system.jpeg" "Hot Water System" hotWaterBody
@@ -142,10 +142,10 @@ contactUsView =
 
 servicesView =
     div [ class "services-container" ]
-        [ service "1" "Service 1" "wash.jpg"
-        , service "2" "Service 2" "deck.jpg"
-        , service "3" "Service 3" "house.jpeg"
-        , service "4" "Service 4" "driveway.png"
+        [ service "1" "Renewed" "wash.jpg"
+        , service "2" "Revitalized" "deck.jpg"
+        , service "3" "Spotless" "house.jpeg"
+        , service "4" "Gleaming" "driveway.png"
         ]
 
 
