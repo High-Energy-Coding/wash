@@ -236,6 +236,19 @@ h1 {
     flex-direction: row;
   }
 }
+.bottom-logo {
+  max-height: 100px;
+}
+.bottom-logo.left {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.bottom-logo.right {
+  @media only screen and (max-width: 600px) {
+    margin-top: 32px;
+  }
+}
 .social-media {
   width: 50%;
 }

@@ -142,7 +142,8 @@ navItemsView model =
 footerView =
     footer
         [ class "footer" ]
-        [ div
+        [ img [ class "bottom-logo left", src "white_transparent.png" ] []
+        , div
             [ class "contact-us" ]
             [ h4 [] [ text "Contact Us" ]
             , p [] [ text "9N573 Koshare Trail" ]
@@ -150,4 +151,5 @@ footerView =
             , p [] [ text "224-622-1040" ]
             , p [] [ text "Kanddpressurewashing@yahoo.com" ]
             ]
+        , img [ class "bottom-logo right", src "white_transparent.png" ] []
         ]
