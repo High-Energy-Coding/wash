@@ -105,7 +105,7 @@ view sharedData page model toMsg pageView =
 navView model =
     div [ class "nav-container" ]
         ([ div [ class "topbar" ]
-            [ a [] [ img [ class "logo", src "/full-logo.png" ] [] ]
+            [ a [] [ img [ class "logo", src "/logo-tight.png" ] [] ]
             , div [ class "clickies" ]
                 [ a [] [ div [ class "clickie" ] [ text "Main" ] ]
                 , a [] [ div [ class "clickie" ] [ text "About Us" ] ]
@@ -142,7 +142,7 @@ navItemsView model =
 footerView =
     footer
         [ class "footer" ]
-        [ img [ class "bottom-logo left", src "white_transparent.png" ] []
+        [ img [ class "bottom-logo left", src "white-transparent.png" ] []
         , div
             [ class "contact-us" ]
             [ h4 [] [ text "Contact Us" ]
@@ -151,5 +151,5 @@ footerView =
             , p [] [ text "224-622-1040" ]
             , p [] [ text "Kanddpressurewashing@yahoo.com" ]
             ]
-        , img [ class "bottom-logo right", src "white_transparent.png" ] []
+        , img [ class "bottom-logo right", src "white-transparent.png" ] []
         ]

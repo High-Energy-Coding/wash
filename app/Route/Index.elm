@@ -66,7 +66,7 @@ head app =
             , dimensions = Nothing
             , mimeType = Nothing
             }
-        , description = "K&D pressure washing LLC"
+        , description = "Revitalize your property's appeal with professional pressure washing services from K&D Pressure Washing. Our expert team delivers thorough cleaning, removing dirt, grime, and stains, revealing the true beauty of your surfaces. Enhance curb appeal and protect your investment today!"
         , locale = Nothing
         , title = "K&D pressure washing LLC"
         }
@@ -102,7 +102,7 @@ greenRowView =
                 ]
             , div [ class "green-main-content" ]
                 [ greenSlotView "/system.jpeg" "Hot Water System" hotWaterBody
-                , greenSlotView "/system2.jpeg" "EPA Friendly" epaFriendlyBody
+                , greenSlotView "/truck-back.jpeg" "EPA Friendly" epaFriendlyBody
                 , greenSlotView "/system3.jpeg" "Waste Water Recovery" wasteWaterBody
                 ]
             ]
@@ -142,10 +142,10 @@ contactUsView =
 
 servicesView =
     div [ class "services-container" ]
-        [ service "1" "Renewed" "wash.jpg"
-        , service "2" "Revitalized" "deck.jpg"
-        , service "3" "Spotless" "house.jpeg"
-        , service "4" "Gleaming" "driveway.png"
+        [ service "1" "Commercial" "wash.jpg"
+        , service "2" "Residential" "deck.jpg"
+        , service "3" "Fully Insured" "house.jpeg"
+        , service "4" "EPA Friendly" "on-driveway.jpg"
         ]
 
 
@@ -169,7 +169,7 @@ service count title imgUrl =
 
 
 hero2 =
-    [ img [ class "hero", src "/house.jpg" ] []
+    [ img [ class "hero", src "/truck_and_trailer.jpg" ] []
     , h1 [ class "headline" ]
         [ span [ class "uno" ] [ text "Redefining Clean." ]
         , br [] []
@@ -182,7 +182,7 @@ hero2 =
 
 whatWeDoView =
     div [ class "wwd-container" ]
-        [ div [ class "draw" ] [ img [ src "full-logo.png", class "draw-logo" ] [] ]
+        [ div [ class "draw" ] [ img [ src "logo2.png", class "draw-logo" ] [] ]
         , div [ class "why" ]
             [ p [] [ text "Welcome to K&D Pressure Washing LLC, where powerful, eco-conscious cleaning meets excellence. Experience spotless results with our state-of-the-art technology and dedicated professionals." ]
             ]
