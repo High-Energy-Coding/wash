@@ -170,12 +170,10 @@ service count title imgUrl =
 
 hero2 =
     [ img [ class "hero", src "/truck_and_trailer.jpg" ] []
-    , h1 [ class "headline" ]
-        [ span [ class "uno" ] [ text "Redefining Clean." ]
-        , br [] []
-        , span [ class "dos" ] [ text "Where Power" ]
-        , br [] []
-        , span [ class "tres" ] [ text "Meets Precision." ]
+    , div [ class "hero-overlay" ]
+        [ h1 [ class "homepage-h1" ] [ text "Professional Power Washing for Chicago's NW Suburbs" ]
+        , p [ class "homepage-subheadline" ] [ text "Serving homes, businesses, and properties of all sizes"]
+        , Route.ContactUs |> Route.link [ class "homepage-cta-btn" ] [ text "Get Your Free Estimate" ]
         ]
     ]
 

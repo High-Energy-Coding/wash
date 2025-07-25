@@ -105,11 +105,11 @@ view sharedData page model toMsg pageView =
 navView model =
     div [ class "nav-container" ]
         ([ div [ class "topbar" ]
-            [ a [] [ img [ class "logo", src "/logo-tight.png" ] [] ]
+            [ Route.Index |> Route.link [] [ img [ class "logo", src "/logo-tight.png" ] [] ]
             , div [ class "clickies" ]
-                [ a [] [ div [ class "clickie" ] [ text "Main" ] ]
-                , a [] [ div [ class "clickie" ] [ text "About Us" ] ]
-                , a [] [ div [ class "clickie" ] [ text "Contact Us" ] ]
+                            [ Route.Index |> Route.link [] [ div [ class "clickie" ] [ text "Main" ] ]
+            , Route.AboutUs |> Route.link [] [ div [ class "clickie" ] [ text "About Us" ] ]
+            , Route.ContactUs |> Route.link [] [ div [ class "clickie" ] [ text "Contact Us" ] ]
                 ]
             , hamburgerOrX model
             ]
@@ -134,8 +134,8 @@ navItemsView model =
 
         True ->
             [ Route.Index |> Route.link [] [ div [ class "item" ] [ text "Main" ] ]
-            , a [] [ div [ class "item" ] [ text "About Us" ] ]
-            , a [] [ div [ class "item" ] [ text "Contact Us" ] ]
+            , Route.AboutUs |> Route.link [] [ div [ class "item" ] [ text "About Us" ] ]
+            , Route.ContactUs |> Route.link [] [ div [ class "item" ] [ text "Contact Us" ] ]
             ]
 
 
