@@ -113,7 +113,7 @@ view sharedData page model toMsg pageView =
 navView model =
     div [ class "nav-container" ]
         ([ div [ class "topbar" ]
-            [ Route.Index |> Route.link [] [ img [ class "logo", src "/logo-tight.png" ] [] ]
+            [ Route.Index |> Route.link [] [ img [ class "logo", src "/logo3.png" ] [] ]
             , div [ class "clickies" ]
                 [ Route.Index |> Route.link [] [ div [ class "clickie" ] [ text "Main" ] ]
                 , Route.AboutUs |> Route.link [] [ div [ class "clickie" ] [ text "About Us" ] ]
@@ -152,7 +152,7 @@ footerView =
         [ class "footer" ]
         [ div [ class "footer-content" ]
             [ div [ class "footer-logo-section" ]
-                [ img [ class "footer-logo", src "white-transparent.png" ] []
+                [ img [ class "footer-logo", src "logo3.png" ] []
                 ]
             , div [ class "footer-info-section" ]
                 [ div [ class "contact-us" ]
