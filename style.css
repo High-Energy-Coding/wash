@@ -243,42 +243,94 @@ h1 {
 }
 
 .footer {
-  padding: 32px 0;
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 40px;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 768px) {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.bottom-logo {
-  max-height: 100px;
+.footer-logo-section {
+  flex-shrink: 0;
 }
 
-.bottom-logo.left {
-  @media only screen and (max-width: 600px) {
-    display: none;
+.footer-logo {
+  max-height: 80px;
+  width: auto;
+}
+
+.footer-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 60px;
+    text-align: left;
   }
-}
-
-.bottom-logo.right {
-  @media only screen and (max-width: 600px) {
-    margin-top: 32px;
-  }
-}
-
-.social-media {
-  width: 50%;
 }
 
 .contact-us {
-  @media only screen and (min-width: 500px) {
-    width: 50%;
-  }
+  flex: 1;
+}
+
+.contact-us h4 {
+  margin-bottom: 16px;
+  color: white;
+  font-size: 18px;
+}
+
+.contact-us p {
+  margin: 8px 0;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.social-media {
+  flex: 1;
+  text-align: center;
+}
+
+.social-media h4 {
+  margin-bottom: 16px;
+  color: white;
+  font-size: 18px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons a {
+  display: inline-block;
+  margin: 0 12px;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons a:hover {
+  color: #f6b17a;
+  transform: scale(1.2);
 }
 
 .icons i {
@@ -515,6 +567,32 @@ a {
 .connect {
   margin-bottom: 64px;
   font-size: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.connect .form-row {
+  align-items: end;
+}
+
+.connect .form-group {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.connect .form-group label {
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.connect .form-group input,
+.connect .form-group select,
+.connect .form-group textarea {
+  flex: 1;
 }
 
 .contact-container {
@@ -548,7 +626,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
 
-  @media (min-width: 600px; ) {}
+  @media (min-width: 600px) {}
 }
 
 .service {
@@ -1173,7 +1251,7 @@ a {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  background: rgba(41, 60, 75, 0.5);
+  background: rgba(41, 60, 75, 0.7);
   padding: 40px 24px;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
