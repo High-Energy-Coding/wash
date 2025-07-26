@@ -165,7 +165,7 @@ footerView =
                 , div [ class "social-media" ]
                     [ h4 [] [ text "Follow Us" ]
                     , div [ class "icons" ]
-                        [ a [ href "https://facebook.com/YOUR_FACEBOOK_PAGE", target "_blank" ]
+                        [ a [ href "https://www.facebook.com/people/K-D-Pressure-Washing-LLC/100090756290719/", target "_blank" ]
                             [ i [ class "fa fa-facebook" ] [] ]
                         ]
                     ]

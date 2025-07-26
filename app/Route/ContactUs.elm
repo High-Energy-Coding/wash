@@ -107,7 +107,7 @@ contactUsView =
                         [ i [ class "fa fa-facebook contact-icon" ] []
                         ]
                     , h3 [] [ text "Follow Us" ]
-                    , a [ href "https://facebook.com/YOUR_FACEBOOK_PAGE", target "_blank", class "contact-link" ] [ text "Facebook" ]
+                    , a [ href "https://www.facebook.com/people/K-D-Pressure-Washing-LLC/100090756290719/", target "_blank", class "contact-link" ] [ text "Facebook" ]
                     ]
                 ]
             ]
