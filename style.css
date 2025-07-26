@@ -101,9 +101,10 @@ h1 {
 }
 
 .hero {
-  width: auto;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: left;
 }
 
 @keyframes fadeIn {
