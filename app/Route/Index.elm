@@ -172,8 +172,8 @@ hero2 =
     [ img [ class "hero", src "/truck_and_trailer.jpg" ] []
     , div [ class "hero-overlay" ]
         [ h1 [ class "homepage-h1" ] [ text "Professional Power Washing for Chicago's NW Suburbs" ]
-        , p [ class "homepage-subheadline" ] [ text "Serving homes, businesses, and properties of all sizes"]
-        , Route.ContactUs |> Route.link [ class "homepage-cta-btn" ] [ text "Get Your Free Estimate" ]
+        , p [ class "homepage-subheadline" ] [ text "Serving homes, businesses, and properties of all sizes" ]
+        , Route.ContactUs |> Route.link [ class "homepage-cta-btn" ] [ text "Reach out today!" ]
         ]
     ]
 

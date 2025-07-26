@@ -85,7 +85,7 @@ view app shared =
 contactUsView =
     [ div [ class "content contact-us-content" ]
         [ div [ class "contact-hero-container" ]
-            [ h1 [ class "contact-headline" ] [ text "Get Your Free Estimate Today" ]
+            [ h1 [ class "contact-headline" ] [ text "Start the Conversation" ]
             , p [ class "contact-subtitle" ] [ text "Professional pressure washing services in Elgin and surrounding areas" ]
             , div [ class "contact-hero-icons" ]
                 [ div [ class "contact-hero-card" ]
@@ -107,7 +107,7 @@ contactUsView =
         , div [ class "contact-main-section" ]
             [ div [ class "contact-form-section" ]
                 [ h2 [] [ text "Send Us a Message" ]
-                , p [] [ text "Fill out the form below and we'll get back to you within 24 hours with your free estimate." ]
+                , p [] [ text "Fill out the form below and we'll get back to you as soon as possible." ]
                 , Html.form
                     [ name "contact"
                     , class "contact-form netlify"
@@ -191,4 +191,4 @@ benefitItem checkmark benefit =
     div [ class "benefit-item" ]
         [ span [ class "benefit-check" ] [ text checkmark ]
         , span [ class "benefit-text" ] [ text benefit ]
-        ] 
+        ]
